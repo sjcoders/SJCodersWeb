@@ -1,12 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./assets/vendor/nucleo/css/nucleo.css";
+import "./assets/vendor/font-awesome/css/font-awesome.min.css";
+import "./assets/scss/argon-design-system-react.scss";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+import LandingPage from "./pages/LandingPage";
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" exact render={props => <LandingPage {...props} />} />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+
 serviceWorker.unregister();
