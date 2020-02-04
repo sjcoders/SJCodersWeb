@@ -8,6 +8,7 @@ const Cover = styled("div")`
   flex-direction: column;
   width: 100%;
   background: linear-gradient(140deg, #9795ef, #f9c5d1);
+  margin-bottom: -27vh;
 `;
 
 export default class LandingCover extends React.Component {

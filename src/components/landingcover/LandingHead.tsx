@@ -10,7 +10,7 @@ const Head = styled("div")`
   width: 35%;
   margin-left: 16vw;
   margin-top: 26vh;
-  margin-bottom: 30vh;
+  margin-bottom: 40vh;
 `;
 
 const Title = styled("p")`
